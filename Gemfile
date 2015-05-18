@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'dashing'
+gem 'activesupport'
+gem 'dotenv' 
+gem 'httparty'
+gem 'codeship'
+gem 'uptimerobot'
+gem 'aws-sdk'
+gem 'nokogiri'
+gem 'debugger'
+gem 'google-api-client'
