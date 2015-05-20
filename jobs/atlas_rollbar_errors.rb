@@ -1,6 +1,6 @@
 require 'net/http'
 
-SCHEDULER.every '5s' do  
+SCHEDULER.every '60s' do  
   rollbar_errors = get_rollbar_errors
   
   errors = get_count_by(rollbar_errors, "error")
