@@ -2,7 +2,6 @@ require 'google/api_client'
 require 'digest/md5'
 require 'active_support'
 require 'active_support/all'
-require 'debugger'
 
 # Start the scheduler
 SCHEDULER.every '5s', :first_in => 4 do |job|

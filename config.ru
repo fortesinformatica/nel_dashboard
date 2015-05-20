@@ -1,6 +1,8 @@
 require 'dashing'
-require 'dotenv'
-Dotenv.load
+if Sinatra::Base.development?
+  require 'dotenv'
+  Dotenv.load
+end  
 
 configure do
   helpers do
