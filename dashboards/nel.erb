@@ -1,7 +1,7 @@
 <script type='text/javascript'>
   $(function() {
-    Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":5,"row":1,"size_x":2,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":5,"row":2,"size_x":2,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1}]')
-    Dashing.numColumns = 6
+    Dashing.gridsterLayout('[{"col":1,"row":2,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":5,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":2,"size_y":1},{"col":2,"row":1,"size_x":2,"size_y":1}]'
+    Dashing.numColumns = 3
 });
 </script>
 
@@ -9,19 +9,19 @@
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="uptimerobot" data-view="Uptimerobot"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="happiness" data-view="Graph" data-title="Happiness Graph" style="background-color:#fa8072"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="atlas_codeship" data-view="Codeship" data-title="Atlas Build Codeship"></div>
     </li>
     
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="leitor10_codeship" data-view="Codeship" data-title="Leitor10 Build Codeship"></div>
-    </li>
-    
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-view="LastDeploy" data-id="atlas_last_deploy"></div>
-    </li>
-
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="atlas_rollbar_errors" data-view="Fullpie" data-title="Erros Rollbar"></div>
     </li>
     
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -29,15 +29,19 @@
     </li>
     
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="atlas_rollbar_errors" data-view="Fullpie" data-title="Erros Rollbar (Atlas)"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="leitor10_codeship" data-view="Codeship" data-title="Leitor10 Build Codeship"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="leitor10_rollbar_errors" data-view="Fullpie" data-title="Erros Rollbar (Leitor10)"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="leitor10_codeclimate" data-view="Codeclimate" data-title="Leitor10 Code Climate GPA"></div>
-    </li>
-    
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="uptimerobot" data-view="Uptimerobot"></div>
-    </li>
-    
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="calendar" data-view="Calendar"></div>
     </li>
     
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">

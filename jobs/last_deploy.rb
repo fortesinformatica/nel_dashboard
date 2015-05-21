@@ -1,11 +1,14 @@
 require 'httparty'
  
 SCHEDULER.every '5s', :first_in => 0 do |job|
-  deploys = HTTParty.get("https://api.rollbar.com/api/1/deploys/?access_token=#{ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]}")['result']['deploys']
+  send_event('atlas_last_deploy', { title: "Atlas Last Deploy", current: get_project_last_deploy(ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]) })
+  send_event('leitor10_last_deploy', { title: "Leitor10 Last Deploy", current: get_project_last_deploy(ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"]) })
+end
+ 
+ def get_project_last_deploy project
+  deploys = HTTParty.get("https://api.rollbar.com/api/1/deploys/?access_token=#{project}")['result']['deploys']
   last_deploy_time_unix = deploys.find { |deploy| deploy['environment'] == "production" }['finish_time']
   last_deploy_time = last_deploy_time_unix.nil? ? "Not available" : time_ago(last_deploy_time_unix)
- 
-  send_event('atlas_last_deploy', { title: "Last Deploy", current: last_deploy_time })
 end
  
 def time_ago timestamp
