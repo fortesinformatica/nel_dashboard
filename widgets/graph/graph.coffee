@@ -4,7 +4,7 @@ class Dashing.Graph extends Dashing.Widget
     return @get('displayedValue') if @get('displayedValue')
     points = @get('points')
     if points
-      points[points.length - 1].y
+      parseFloat(points[points.length - 1].y).toFixed(2)
 
   ready: ->
     container = $(@node).parent()
