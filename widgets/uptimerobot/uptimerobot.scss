@@ -4,28 +4,56 @@
 // 8 - seems down
 // 9 - down
 
-$S0-color: rgba(128, 128, 128, 0.5);
-$S1-color: rgba(200, 255, 200, 0.5);
-$S2-color: rgba(50, 205, 50, 0.5);
-$S8-color: rgba(255, 50, 50, 0.5);
-$S9-color: rgba(255, 50, 50, 0.5);
-
 .widget-uptimerobot {
   background: linear-gradient(to bottom,  #3b4248 0%,#2a2f34 40%,#222529 100%);
 
-  .S0 {
-    background: $S0-color;
+  .monitor {
+    padding: 2px;
+    text-align: left;
+    height: 20px;
   }
-  .S1 {
-    background: $S1-color;
+
+  .name {
+    font-size: 16px;
   }
-  .S2 {
-    background: $S2-color;
+
+  .led-0 {
+    width: 12px;
+    height: 12px;
+    background-color: #A90;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
   }
-  .S8 {
-    background: $S8-color;
+
+  .led-1 {
+    width: 12px;
+    height: 12px;
+    background-color: #4AB;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #006 0 -1px 9px, #06F 0 2px 14px;
   }
-  .S9 {
-    background: $S9-color;
+
+  .led-2 {
+    width: 12px;
+    height: 12px;
+    background-color: #AF0;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+  }
+
+  .led-8 {
+    width: 12px;
+    height: 12px;
+    background-color: #940;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+  }
+
+  .led-9 {
+    width: 12px;
+    height: 12px;
+    background-color: #940;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
   }
 }

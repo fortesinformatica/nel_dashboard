@@ -1,7 +1,6 @@
-<h1>Uptime Robot Server status</h1>
- 
-<ul>
-  <li class="monitor" data-foreach-monitor="monitors" data-bind-class="monitor.status">
-    <span data-bind="monitor.friendlyname"></span>
-  </li>
-</ul>
+<table>
+  <tr class="monitor" data-foreach-monitor="monitors">
+    <td><div data-bind-class="monitor.status_class"/></td>
+    <td class="name" data-bind="monitor.friendlyname"></td>
+  </tr>
+</table>
