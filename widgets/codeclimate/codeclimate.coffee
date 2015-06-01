@@ -7,3 +7,4 @@ class Dashing.Codeclimate extends Dashing.Widget
   onData: (data) ->
     if data.status
       $(@get('node')).addClass("status-#{data.status}")
+    console.log(data)

@@ -1,12 +1,9 @@
 <script type='text/javascript'>
   $(function() {
     // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-
-
     Dashing.widget_base_dimensions = [315, 235]
     Dashing.numColumns = 4
     Dashing.widget_margins = [2, 2]
-    // Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
     //720p -> max 3 rows
     //720p -> max 5 columns
     //TV RESOLUTION: 1280x720 (720p)
@@ -39,10 +36,13 @@
       <div data-id="atlas_codeclimate" data-view="Codeclimate" data-title="Atlas Code Climate GPA"></div>
     </li>
     <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="atlas_rollbar_errors" data-view="Fullpie" data-title="Rollbar (Atlas)"></div>
+      <div data-id="leitor10_codeclimate" data-view="Codeclimate" data-title="Leitor10 Code Climate GPA"></div>
     </li>
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="leitor10_codeship" data-view="Codeship" data-title="Leitor10 Build Codeship"></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="atlas_codeship" data-view="Codeship" data-title="Atlas Build Codeship"></div>
     </li>
   </ul>
 </div>
