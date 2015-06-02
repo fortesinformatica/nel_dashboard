@@ -1,30 +1,28 @@
-require 'net/http'
+require 'google/api_client'
+require 'google_drive'
+require 'pry'
 
 SCHEDULER.every '5s' do
-  # happiness_spreadsheet_points = get_happiness_spreadsheet_data
-  # send_event('happiness', points: happiness_spreadsheet_points)
+  session = create_session
+  worksheets = worksheets_by_title session, ENV['SPREADSHEET_TITLE']
+  points = make_graph_points worksheets
+  send_event('happiness', points: points)
 end
 
-def get_happiness_spreadsheet_data
-  uri = URI("https://spreadsheets.google.com/feeds/list/#{ENV["GOOGLE_SPREADSHEET_NOTA_SATISFACAO_KEY"]}/od6/private/full")
-
-  http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-
-  headers = { "Authorization" => "GoogleLogin auth=#{ENV["GOOGLE_API_AUTH"]}" }
-  response = http.request Net::HTTP::Get.new(uri.request_uri, headers)
-
-  get_points_by response.body
+def create_session
+  session = GoogleDrive.login_with_oauth(ENV['GOOGLE_ACCESS_TOKEN'])
 end
 
-def get_points_by body
+def worksheets_by_title session, title
+  spreadsheet = session.spreadsheet_by_title(title)
+  worksheets = spreadsheet.worksheets[0] unless spreadsheet.nil?
+end
+
+def make_graph_points worksheets
   points = []
-  doc = Nokogiri.XML(body, nil, 'EUC-JP')
-
-  values = doc.css('entry').map{|r| r.children.last.children.text }
-  last = values.shift
-  values.push last
-  values.count.times{|n| points << {x: n, y: values[n-1].gsub(",",".").to_f }}
-
+  values = worksheets.cells.values
+  (0..values.length - 1).step(2) do |n|
+    points << { x: Date.parse(values[n]).to_time.to_i, y: values[n + 1].to_f }
+  end
   points
 end
