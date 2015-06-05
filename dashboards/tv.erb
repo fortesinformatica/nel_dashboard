@@ -2,7 +2,7 @@
   $(function() {
     // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
     Dashing.widget_base_dimensions = [315, 235]
-    Dashing.numColumns = 4
+    Dashing.numColumns = 5
     Dashing.widget_margins = [2, 2]
     //720p -> max 3 rows
     //720p -> max 5 columns
@@ -28,31 +28,45 @@
     <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
       <div data-id="happiness" data-view="Graph" data-title="Happiness Graph" style="background-color:#fa8072"></div>
     </li>
-    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-view="LastDeploy" data-id="atlas_last_deploy"></div>
-    </li>
+
 
     <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="atlas_codeclimate" data-view="Codeclimate" data-title="Atlas Code Climate GPA"></div>
     </li>
     <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="leitor10_codeclimate" data-view="Codeclimate" data-title="Leitor10 Code Climate GPA"></div>
-    </li>
-    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="leitor10_codeship" data-view="Codeship" data-title="Leitor10 Build Codeship"></div>
-    </li>
-    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
       <div data-id="atlas_codeship" data-view="Codeship" data-title="Atlas Build Codeship"></div>
     </li>
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-view="Meter" data-title='Atlas Coverage' data-id="atlas_coverage" data-min="0" data-max="100"></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-view="LastDeploy" data-id="atlas_last_deploy"></div>
+    </li>
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="atlas_rollbar_errors" data-view="List" data-title="Rollbar (Atlas)"></div>
+    </li>
+
+
 
     <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="leitor10_codeclimate" data-view="Codeclimate" data-title="Leitor10 Code Climate GPA"></div>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="leitor10_codeship" data-view="Codeship" data-title="Leitor10 Build Codeship"></div>
+    </li>
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-view="Meter" data-title='Leitor10 Coverage' data-id="leitor10_coverage" data-min="0" data-max="100"></div>
+    </li>
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-view="LastDeploy" data-id="leitor10_last_deploy"></div>
+    </li>
+    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
       <div data-id="leitor10_rollbar_errors" data-view="List" data-title="Rollbar (Leitor10)"></div>
     </li>
-    <li data-row="3" data-col="2" data-sizex="2" data-sizey="1">
+
+
+    <li data-row="4" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="leitor10_cpu" data-view="Graph" data-title="Leitor10 CPU Usage" style="background-color:#ff9618"></div>
-    </li>
-    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="atlas_rollbar_errors" data-view="List" data-title="Rollbar (Atlas)"></div>
     </li>
   </ul>
 </div>

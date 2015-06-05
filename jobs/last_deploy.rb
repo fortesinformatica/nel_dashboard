@@ -4,7 +4,7 @@ require 'pry'
 
 SCHEDULER.every '5s', :first_in => 0 do |job|
   send_event('atlas_last_deploy', last_deploy('Atlas', ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]))
-  # send_event('leitor10_last_deploy', last_deploy('Leitor 10', ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"]))
+  send_event('leitor10_last_deploy', last_deploy('Leitor 10', ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"]))
 end
 
 def last_deploy project_name, access_token
