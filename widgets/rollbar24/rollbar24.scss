@@ -1,0 +1,67 @@
+// ----------------------------------------------------------------------------
+// Widget-rollbar styles
+// ----------------------------------------------------------------------------
+.widget-rollbar24 {
+
+  background-color: #564F2B;
+  padding: 0px 12px!important;
+
+  input.rollbar {
+    background-color: rgba(202, 9, 17, 0.7);
+    color: #fff;
+  }
+
+  .title {
+    color: rgb(198, 213, 228);
+    font-size: 14px;
+    padding-bottom: 2px;
+
+    position: absolute;
+    top: 5px;
+    background-color: rgb(87, 53, 10);
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .rollbar_sum{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 60px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .div_faults_label{
+    width: 550px;
+    height: 20px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+  }
+
+  .rollbar_list{
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 170px;
+    overflow-y: scroll;
+    
+    .fault{
+      border-bottom: 1px solid #777;
+      display: block;
+      height: 28px;
+      padding: 0 10px;
+
+      .faults_label{        
+        font-size: 12px;
+      }
+      .faults_value{
+        float: right; 
+        font-size: 20px;
+        color: rgb(240, 104, 7);
+      }
+    }
+  }
+}

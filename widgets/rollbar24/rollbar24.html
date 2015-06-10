@@ -1,0 +1,29 @@
+<header>
+  <h1 class="title" data-bind="title"></h1>
+</header>
+
+<div class='rollbar_list'>
+  <ul>
+    <li data-foreach-item="criticals">
+      <div class='fault'>
+        <div class='div_faults_label'>
+          <span class="faults_label" data-bind="item.title"></span>
+        </div>
+          <span class="faults_value" data-bind="item.occurrences_count"></span>
+      </div>
+    </li>
+
+    <li data-foreach-item="errors">
+      <div class='fault'>
+        <div class='div_faults_label'>
+          <span class="faults_label" data-bind="item.title"></span>
+        </div>          
+          <span class="faults_value" data-bind="item.occurrences_count"></span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class='rollbar_sum'>
+  <span class='critical_current' data-bind="faults_sum"></span>
+</div>
