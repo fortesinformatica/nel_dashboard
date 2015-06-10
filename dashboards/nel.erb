@@ -7,15 +7,24 @@ Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":
 <% content_for :title do %>Equipe NEL - dashboard (Atlas)<% end %>
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+<!--     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="uptimerobot" data-view="Uptimerobot"></div>
     </li>
     
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="happiness" data-view="Graph" data-title="Happiness Graph" style="background-color:#fa8072"></div>
     </li>
-    
+ -->
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="atlas_rollbar_errors" data-view="Rollbar" data-title="Rollbar (Atlas)"></div>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="leitor10_rollbar_errors" data-view="Rollbar" data-title="Rollbar (Leitor10)"></div>
+    </li>
+
+    
+<!--     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="atlas_codeship" data-view="Codeship" data-title="Atlas Build Codeship"></div>
     </li>
     
@@ -46,7 +55,7 @@ Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="leitor10_cpu" data-view="Graph" data-title="Leitor10 CPU Usage" style="background-color:#ff9618"></div>
     </li>
-
+ -->
   </ul>
   <center><div style="font-size: 12px">Equipe NEL - Dashboard</div></center>
 </div>
