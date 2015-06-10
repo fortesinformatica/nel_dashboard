@@ -12,11 +12,11 @@ end
 def rollbar_errors access_token
 
   today = Date.today
-  data_init_current = '05-01-2015'
-  data_final_current = '05-15-2015'
+  data_init_current = (today - 7).strftime('%m-%d-%Y')
+  data_final_current = (today).strftime('%m-%d-%Y')
 
-  data_init_last = '05-15-2015'
-  data_final_last = '05-30-2015'
+  data_init_last = (today - 15).strftime('%m-%d-%Y')
+  data_final_last = (today - 8).strftime('%m-%d-%Y')
 
   response_critical_current = JSON.parse(RestClient.get "https://api.rollbar.com/api/1/items/", params: { access_token: "#{access_token}", environment: 'production', date_from: data_init_current, date_to: data_final_current, level: 'critical' })
   response_errors_current = JSON.parse(RestClient.get "https://api.rollbar.com/api/1/items/", params: { access_token: "#{access_token}", environment: 'production', date_from: data_init_current, date_to: data_final_current, level: 'error' })
