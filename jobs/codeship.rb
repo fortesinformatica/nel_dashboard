@@ -1,6 +1,6 @@
 require 'codeship'
 
-SCHEDULER.every '5s', :first_in => 0 do |job|
+SCHEDULER.every '30s', :first_in => 0 do |job|
   project_status_atlas = Codeship::Status.new(ENV["CODESHIP_ATLAS"], branch: "master")
   send_event("atlas_codeship", {current: project_status_atlas.status})
   

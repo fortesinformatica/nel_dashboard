@@ -1,6 +1,6 @@
 require './lib/dashing_ec2'
 
-SCHEDULER.every '5s', :first_in => 0 do |job|
+SCHEDULER.every '5m', :first_in => 0 do |job|
   dashing_ec2 = DashingEC2.new({
       :access_key_id => ENV["AWS_ACCESS_KEY_ID"],
       :secret_access_key => ENV["AWS_ACCESS_KEY_SECRET"]

@@ -4,7 +4,7 @@ require 'active_support'
 require 'active_support/all'
 
 # Start the scheduler
-SCHEDULER.every '5s', :first_in => 4 do |job|
+SCHEDULER.every '1d', :first_in => 4 do |job|
 #result.data
   # send_event('calendar', { events: get_events })
 end

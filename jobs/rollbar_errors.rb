@@ -2,7 +2,7 @@ require 'date'
 require 'rest-client'
 require 'pry'
 
-SCHEDULER.every '60s' do
+SCHEDULER.every '3h' do
   atlas = rollbar_errors(ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"])
   leitor10 = rollbar_errors(ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"])
   send_event('atlas_rollbar_errors', atlas)

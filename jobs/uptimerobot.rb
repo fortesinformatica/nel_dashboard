@@ -1,6 +1,6 @@
 require 'uptimerobot'
 
-SCHEDULER.every '5m', :first_in => 0 do |job|
+SCHEDULER.every '1m', :first_in => 0 do |job|
   client = UptimeRobot::Client.new(apiKey: ENV['UPTIMEROBOT_APIKEY'])
 
   raw_monitors = client.getMonitors['monitors']['monitor']
