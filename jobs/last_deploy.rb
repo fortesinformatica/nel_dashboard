@@ -2,7 +2,7 @@ require 'httparty'
 require 'rest-client'
 require 'pry'
 
-SCHEDULER.every '1h', :first_in => 0 do |job|
+SCHEDULER.every '20m', :first_in => 0 do |job|
   send_event('atlas_last_deploy', last_deploy('Atlas', ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]))
   send_event('leitor10_last_deploy', last_deploy('Leitor 10', ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"]))
 end

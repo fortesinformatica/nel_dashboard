@@ -13,11 +13,18 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   background-color: $background-color;
   vertical-align: top;
 
+  .avatar_url{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+  }
+
   img.background {
     width: 100% !important;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 0px;
     opacity: 0.05;
   }
 
@@ -33,14 +40,23 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     .label {
       text-align: left;
       padding-left: 90px;
-      font-size: 20px;
+      font-size: 12px;
       &.small {
         font-size: 14px;
       }
     }
   }
 
+  .branch{
+    font-size: 14px!important;
+    position: absolute;
+    top: 21px;
+  }
+
   .title {
+    position: absolute;
+    font-size: 18px;
+    top: 0px;
     color: $title-color;
   }
 
