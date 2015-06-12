@@ -1,6 +1,5 @@
 require 'httparty'
 require 'digest/md5'
-require 'debugger'
 
 projects = [
   { user: 'fortesinformatica', repo: 'atlas', branch: 'master' },
