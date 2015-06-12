@@ -3,17 +3,17 @@
 </header>
 
 <div class='rollbar_all'>
-  <span class='current_label'> Criticals: </span>
-  <span class='critical_current' data-bind="critical_current"></span>
-
-  <p class="change-rate">
-    <i data-bind-class="arrowCritical"></i>previously: <span class="critical_last" data-bind="critical_last"></span>
-  </p>
-
-  <span class='current_label'> Errors: </span>
+  <span class='current_label'> Erros count: </span>
   <span class='errors_current' data-bind="errors_current"></span>
 
   <p class="change-rate">
-    <i data-bind-class="arrowErrors"></i>previously: <span class='errors_last' data-bind="errors_last"></span>
+    <i data-bind-class="arrowErrors"></i>previously: <span class="errors_last" data-bind="errors_last"></span>
+  </p>
+
+  <span class='current_label'> Distinct errors: </span>
+  <span class='errors_distinct_current' data-bind="errors_distinct_current"></span>
+
+  <p class="change-rate">
+    <i data-bind-class="arrowDistinct"></i>previously: <span class='errors_distinct_last' data-bind="errors_distinct_last"></span>
   </p>
 </div>

@@ -29,10 +29,20 @@ def rollbar_errors access_token
   items_response_critical_last = response_critical_last['result']['items'].map{|err| err['occurrences_count']}
   items_response_errors_last = response_errors_last['result']['items'].map{|err| err['occurrences_count']}
 
+  critical_current = items_response_critical_current.inject(:+)
+  errors_current = items_response_errors_current.inject(:+)
+  critical_last = items_response_critical_last.inject(:+)
+  errors_last = items_response_errors_last.inject(:+)
+
+  critical_distinct_current = response_critical_current['result']['items'].length
+  errors_distinct_current = response_errors_current['result']['items'].length
+  critical_distinct_last = response_critical_last['result']['items'].length
+  errors_distinct_last = response_errors_last['result']['items'].length
+
   {
-    critical_current: items_response_critical_current.inject(:+),
-    errors_current: items_response_errors_current.inject(:+),
-    critical_last: items_response_critical_last.inject(:+),
-    errors_last: items_response_errors_last.inject(:+)
+    errors_current: critical_current.to_i + errors_current.to_i,
+    errors_last: critical_last.to_i + errors_last.to_i,
+    errors_distinct_current: critical_distinct_current.to_i + errors_distinct_current.to_i,
+    errors_distinct_last: critical_distinct_last.to_i + errors_distinct_last.to_i
   }
 end

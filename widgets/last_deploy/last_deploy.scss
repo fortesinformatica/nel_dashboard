@@ -16,11 +16,29 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .title {
     color: $title-color;
+    position: absolute;
+    font-size: 16px;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-bottom: 1px solid rgb(9, 140, 130); 
   }
 
   .value {
-    font-size: 50px;
-    text-transform: lowercase 
+    font-size: 40px;
+    text-transform: lowercase;
+  }
+
+  .last-deploy-word{
+    position: absolute;
+    top: 9px;
+    /* margin: auto; */
+    left: 5px;
+    color: rgb(38, 132, 111);
+    font-size: 18px;
+    opacity: 0.5;
+    font-weight: bold;
   }
 
   .change-rate {

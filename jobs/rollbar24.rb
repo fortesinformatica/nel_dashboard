@@ -27,7 +27,7 @@ def rollbar24_errors access_token
   total = critical_occurrences_count.to_i + errors_occurrences_count.to_i
 
   {
-    faults_sum: total > 0 ? total : "Sem erros",
+    faults_sum: total,
     errors: errors,
     criticals: criticals
   }
