@@ -2,7 +2,7 @@ require 'google/api_client'
 require 'google_drive'
 require 'pry'
 
-SCHEDULER.every '5h' do
+SCHEDULER.every '5h', :first_in => 0 do
   session = create_session
   worksheets = worksheets_by_title session, ENV['SPREADSHEET_TITLE']
   points = make_graph_points worksheets
