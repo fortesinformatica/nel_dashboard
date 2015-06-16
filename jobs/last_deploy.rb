@@ -2,14 +2,20 @@ require 'httparty'
 require 'rest-client'
 require 'pry'
 
-SCHEDULER.every '20m', :first_in => 0 do |job|
+SCHEDULER.every '2m', :first_in => 0 do |job|
   send_event('atlas_last_deploy', last_deploy('Atlas', ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]))
   send_event('leitor10_last_deploy', last_deploy('Leitor 10', ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"]))
 end
 
-def last_deploy project_name, access_token
-  response = JSON.parse(RestClient.get "https://api.rollbar.com/api/1/deploys/", params: { access_token: "#{access_token}", status: "active" })
-  last_deploy = response['result']['deploys'].find { |deploy| deploy['environment'] == "production" }
+def last_deploy project_name, access_token  
+  last_deploy = nil
+  count = 1
+  while !last_deploy
+    response = JSON.parse(RestClient.get "https://api.rollbar.com/api/1/deploys/", params: { access_token: "#{access_token}", status: "active", page: count })
+    last_deploy = response['result']['deploys'].find { |deploy| deploy['environment'] == "production" }
+    count += 1
+  end
+
   {
     title: project_name,
     user: last_deploy['local_username'],
