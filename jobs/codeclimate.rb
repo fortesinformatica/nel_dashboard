@@ -1,7 +1,7 @@
 require 'rest-client'
 require 'pry'
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
+SCHEDULER.every '10m', :first_in => 0 do |job|
   atlas_stats = project_status ENV["CODE_CLIMATE_ATLAS_ID"]
   leitor10_stats = project_status ENV["CODE_CLIMATE_LEITOR10_ID"]
   send_event("atlas_codeclimate", atlas_stats)
