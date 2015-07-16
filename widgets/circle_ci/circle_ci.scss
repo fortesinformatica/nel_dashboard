@@ -42,7 +42,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
       padding-left: 90px;
       font-size: 12px;
       &.small {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -55,7 +55,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .title {
     position: absolute;
-    font-size: 18px;
+    font-size: 16px;
     top: 0px;
     color: $title-color;
   }
@@ -95,7 +95,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     display: block;
     font-weight: 600;
     color: $state-color;
-    font-size: 40px;
+    font-size: 36px;
     word-wrap: break-word;
   }
 

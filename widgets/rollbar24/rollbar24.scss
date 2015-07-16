@@ -33,7 +33,7 @@
   }
 
   .div_faults_label{
-    width: 550px;
+    width: 350px;
     height: 20px;
     overflow: hidden;
     float: left;
@@ -47,18 +47,18 @@
     left: 0;
     height: 170px;
     overflow-y: scroll;
-    
+
     .fault{
       border-bottom: 1px solid #777;
       display: block;
       height: 28px;
       padding: 0 10px;
 
-      .faults_label{        
+      .faults_label{
         font-size: 12px;
       }
       .faults_value{
-        float: right; 
+        float: right;
         font-size: 20px;
         color: rgb(240, 104, 7);
       }
