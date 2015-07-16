@@ -8,9 +8,11 @@
   background: linear-gradient(to bottom,  #3b4248 0%,#2a2f34 40%,#222529 100%);
 
   .monitor {
-    padding: 2px;
+    padding: 5px;
     text-align: left;
+    position: relative;
     height: 20px;
+    float: left;
   }
 
   .name {
