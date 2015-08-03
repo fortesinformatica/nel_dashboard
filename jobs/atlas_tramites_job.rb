@@ -6,7 +6,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   data = []
 
   response.each do | empresa |
-    data << { label: empresa["descricao"].split(" ")[0..1].join(" "), value: empresa["quantidade"] }
+    data << { label: empresa["descricao"].split(" ")[0], value: empresa["quantidade"] }
   end
 
   send_event 'atlas-tramites-por-empresa', { value: data }
