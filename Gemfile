@@ -16,6 +16,6 @@ gem 'rails_12factor', group: :production
 
 group :development do
   gem 'byebug'
-  gem 'pry'
   gem 'dotenv'
+  gem 'pry'  
 end

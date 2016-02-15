@@ -1,6 +1,5 @@
 require 'date'
 require 'rest-client'
-require 'pry'
 
 SCHEDULER.every '20s', :first_in => 0 do
   atlas = rollbar24_errors(ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"])

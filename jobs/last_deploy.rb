@@ -1,6 +1,5 @@
 require 'httparty'
 require 'rest-client'
-require 'pry'
 
 SCHEDULER.every '2m', :first_in => 0 do |job|
   send_event('atlas_last_deploy', last_deploy('Atlas', ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"]))

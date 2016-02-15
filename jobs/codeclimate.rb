@@ -1,5 +1,4 @@
 require 'rest-client'
-require 'pry'
 
 SCHEDULER.every '60s', :first_in => 60 do |job|
   atlas_stats = project_status ENV["CODE_CLIMATE_ATLAS_ID"]
