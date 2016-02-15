@@ -10,12 +10,7 @@ gem 'uptimerobot'
 gem 'nokogiri'
 gem 'rest-client'
 gem 'aws-sdk', '~> 2.0'
-# gem 'google-api-client'
-# gem 'google_drive'
-gem 'rails_12factor', group: :production
-
-group :development do
-  gem 'byebug'
-  gem 'dotenv'
-  gem 'pry'  
-end
+gem 'rails_12factor'
+gem 'byebug'
+gem 'dotenv'
+gem 'pry'

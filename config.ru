@@ -1,9 +1,6 @@
-def development_require(gem)
-  require gem if ENV['RACK_ENV'] == 'development'
-end
-
+require 'pry'
 require 'dashing'
-development_require 'dotenv'
+require 'dotenv'
 
 Dotenv.load
 
