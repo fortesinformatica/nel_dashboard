@@ -13,6 +13,7 @@ gem 'rest-client'
 gem 'aws-sdk', '~> 2.0'
 gem 'google-api-client'
 gem 'google_drive'
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'byebug'
