@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '2.3.0'
+
 gem 'dashing'
 gem 'activesupport'
 gem 'httparty'
