@@ -1,6 +1,6 @@
 require 'uptimerobot'
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
+SCHEDULER.every '10s', :first_in => 0 do |job|
   client = UptimeRobot::Client.new(apiKey: ENV['UPTIMEROBOT_APIKEY'])
 
   raw_monitors = client.getMonitors['monitors']['monitor']
@@ -8,7 +8,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     {
       friendlyname: monitor['friendlyname'],
       status: monitor['status'],
-      status_class: 'led-' << monitor['status']
+      status_class: "circle led-" << monitor['status']
     }
   }
 

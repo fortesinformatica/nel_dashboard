@@ -2,6 +2,8 @@ require 'dashing'
 require 'dotenv'
 Dotenv.load
 
+set :protection, :except => :frame_options
+
 configure do
   helpers do
     def protected!

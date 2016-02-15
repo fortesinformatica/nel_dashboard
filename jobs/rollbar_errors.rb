@@ -2,11 +2,13 @@ require 'date'
 require 'rest-client'
 require 'pry'
 
-SCHEDULER.every '5m', :first_in => 0 do
+SCHEDULER.every '10s', :first_in => 0 do
   atlas = rollbar_errors(ENV["ROLLBAR_ACCESS_TOKEN_ATLAS"])
   leitor10 = rollbar_errors(ENV["ROLLBAR_ACCESS_TOKEN_LEITOR10"])
+  eva = rollbar_errors(ENV["ROLLBAR_ACCESS_TOKEN_EVA"])
   send_event('atlas_rollbar_errors', atlas)
   send_event('leitor10_rollbar_errors', leitor10)
+  send_event('eva_rollbar_errors', eva)
 end
 
 def rollbar_errors access_token

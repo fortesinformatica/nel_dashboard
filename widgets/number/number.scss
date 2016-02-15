@@ -16,15 +16,17 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .title {
     color: $title-color;
+    font-size: 30px;
   }
 
   .value {
     color: $value-color;
+    font-size: 66px;
   }
 
   .change-rate {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 22px;
     color: $value-color;
   }
 
