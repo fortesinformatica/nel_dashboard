@@ -2,14 +2,17 @@ source 'http://rubygems.org'
 
 gem 'dashing'
 gem 'activesupport'
-gem 'dotenv'
 gem 'httparty'
 gem 'codeship'
 gem 'uptimerobot'
-gem 'aws-sdk'
 gem 'nokogiri'
-gem 'google-api-client'
-gem 'pry'
 gem 'rest-client'
+gem 'aws-sdk', '~> 2.0'
+gem 'google-api-client'
 gem 'google_drive'
-gem 'byebug'
+
+group :development do
+  gem 'byebug'
+  gem 'pry'
+  gem 'dotenv'
+end

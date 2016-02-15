@@ -4,6 +4,7 @@ require 'digest/md5'
 projects = [
   { user: 'fortesinformatica', repo: 'atlas', branch: 'master' },
   { user: 'fortesinformatica', repo: 'bookmaker', branch: 'master' },
+  { user: 'fortesinformatica', repo: 'eva', branch: 'master' }
 ]
 
 def duration(time)

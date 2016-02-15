@@ -5,57 +5,49 @@
 // 9 - down
 
 .widget-uptimerobot {
-  background: linear-gradient(to bottom,  #3b4248 0%,#2a2f34 40%,#222529 100%);
+  background: #5133AB;
+
+  .panel {
+    width: 100%;
+  }
 
   .monitor {
     padding: 5px;
-    text-align: left;
     position: relative;
     height: 20px;
-    float: left;
+    width: 200px;
   }
 
   .name {
+    text-align: left;
     font-size: 16px;
   }
 
-  .led-0 {
-    width: 12px;
-    height: 12px;
-    background-color: #A90;
+  .circle {
     border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .led-0 {
+    background-color: #A90;
   }
 
   .led-1 {
-    width: 12px;
-    height: 12px;
     background-color: #4AB;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #006 0 -1px 9px, #06F 0 2px 14px;
   }
 
   .led-2 {
-    width: 12px;
-    height: 12px;
     background-color: #AF0;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
   }
 
   .led-8 {
-    width: 12px;
-    height: 12px;
     background-color: #940;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
   }
 
   .led-9 {
-    width: 12px;
-    height: 12px;
     background-color: #940;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
   }
 }
