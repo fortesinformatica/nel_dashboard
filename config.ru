@@ -1,5 +1,10 @@
+def development_require(gem)
+  require gem if ENV['RACK_ENV'] == 'development'
+end
+
 require 'dashing'
-require 'dotenv'
+development_require 'dotenv'
+
 Dotenv.load
 
 set :protection, :except => :frame_options
