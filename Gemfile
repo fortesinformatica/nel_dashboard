@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 ruby '2.3.0'
 
 gem 'dashing'
+gem 'puma'
 gem 'activesupport'
 gem 'httparty'
 gem 'codeship'
