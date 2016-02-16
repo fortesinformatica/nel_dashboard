@@ -15,7 +15,7 @@ $meter-background:  darken($background-color, 15%);
 .widget-meter {
 
   background-color: $background-color;
-  padding: 0px 12px!important;
+  padding: 0px !important;
 
   input.meter {
     background-color: $meter-background;
@@ -24,12 +24,12 @@ $meter-background:  darken($background-color, 15%);
 
   .title {
     color: $title-color;
-    font-size: 14px;
+    font-size: 90%;
   }
 
   .change-rate {
-    font-weight: 300;
-    font-size: 12px;
+    // font-weight: 300;
+    font-size: 100%;
     color: $value-color;
   }
 
@@ -39,7 +39,7 @@ $meter-background:  darken($background-color, 15%);
 
   .updated-at {
     color: rgba(0, 0, 0, 0.3);
-    font-size: 12px;
+    font-size: 90%;
     margin-top: 15px;
     position: relative;
   }

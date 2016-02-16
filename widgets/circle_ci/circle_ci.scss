@@ -17,7 +17,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 50px;
+    width: 25%;
   }
 
   img.background {
@@ -40,22 +40,22 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     .label {
       text-align: left;
       padding-left: 90px;
-      font-size: 12px;
+      font-size: 100%;
       &.small {
-        font-size: 12px;
+        font-size: 50%;
       }
     }
   }
 
   .branch{
-    font-size: 14px!important;
+    font-size: 80%!important;
     position: absolute;
     top: 21px;
   }
 
   .title {
     position: absolute;
-    font-size: 16px;
+    font-size: 100%;
     top: 0px;
     color: $title-color;
   }
@@ -82,11 +82,11 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     text-align: center;
     display: block;
     color: $label-color;
-    font-size: 24px;
+    font-size: 50%;
     word-wrap: break-word;
 
     &.small {
-      font-size: 18px;
+      font-size: 75%;
     }
   }
 
@@ -95,12 +95,13 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     display: block;
     font-weight: 600;
     color: $state-color;
-    font-size: 30px;
+    font-size: 180%;
     word-wrap: break-word;
   }
 
   .updated-at {
     color: rgba(0, 0, 0, 0.3);
+    font-size: 90%;
   }
 
   .more-info {

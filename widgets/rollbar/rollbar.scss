@@ -14,30 +14,30 @@
   .title {
     color: rgb(198, 213, 228);
     border-bottom: 1px dashed;
-    font-size: 14px;
+    font-size: 100%;
     padding-bottom: 2px;
   }
 
   .change-rate {
-    font-weight: 300;
-    font-size: 12px;
+    // font-weight: 300;
+    font-size: 90%;
   }
 
   .current_label{
-    font-size: 19px;
+    font-size: 90%;
     color: rgb(247, 222, 222);
   }
 
   .errors_current{
-    font-size: 50px;
-    font-weight: bold; 
+    font-size: 100%;
+    font-weight: bold;
     color: red;
   }
 
   .errors_distinct_current{
-    font-size: 50px;
-    font-weight: bold;   
-    color: #FFA63C;    
+    font-size: 100%;
+    font-weight: bold;
+    color: #FFA63C;
   }
 
   .icon-arrow-up{
@@ -57,12 +57,12 @@
   .errors_last{
     color: rgb(205, 13, 35);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 100%;
   }
 
   .errors_distinct_last{
     color: rgb(150, 153, 19);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 100%;
   }
 }

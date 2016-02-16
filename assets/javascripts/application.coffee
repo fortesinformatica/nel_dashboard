@@ -9,8 +9,8 @@ console.log("Yeah! The dashboard has started!")
 
 Dashing.on 'ready', ->
   widget_columns = 8
-  widget_margin_horizontal = 5
-  widget_margin_vertical = 5
+  widget_margin_horizontal = 2
+  widget_margin_vertical = 2
   widget_width = window.screen.width/widget_columns - 2 * widget_margin_horizontal
   widget_height = widget_width
 
