@@ -1,3 +1,11 @@
+
+CHAPELETA = "https://app.datadoghq.com/graph/embed?token="
+RABETA = "&height=#{widget_height}&width=#{widget_width}&legend=false"
+
+def url(toco)
+  "#{CHAPELETA}#{toco}#{RABETA}"
+end
+
 SCHEDULER.every '10s', :first_in => 0 do |job|
 
   width = ENV['MONITOR_WIDTH'].to_i
@@ -7,8 +15,6 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   widget_width = (width/columns - 2 * margin) * 2
   widget_height = widget_width / 2
 
-  CHAPELETA = "https://app.datadoghq.com/graph/embed?token="
-  RABETA = "&height=#{widget_height}&width=#{widget_width}&legend=false"
 
   atlas_cpu = "5268946ac059b467b24dd429b286f0134aab4dbdfc4a4539d70a76f27fa4d38d"
   atlas_memory = "eb18c75089ebcdefc16b91e04c765d93108c34a6a295297c2667c06964271637"
@@ -18,8 +24,5 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   send_event('datadog_atlas_memory', url: url(atlas_memory))
   send_event('datadog_rds', url: url_rds)
 
-  def url(toco)
-    "#{CHAPELETA}#{toco}#{RABETA}"
-  end
-
 end
+
