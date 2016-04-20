@@ -10,7 +10,7 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   CHAPELETA = "https://app.datadoghq.com/graph/embed?token="
   RABETA = "&height=#{widget_height}&width=#{widget_width}&legend=false"
 
-  atlas_cpu = "21f775e1301d73ccc877866d5bb6c4ba640cd19fe28b1d25bf68593e97f06a59"
+  atlas_cpu = "5268946ac059b467b24dd429b286f0134aab4dbdfc4a4539d70a76f27fa4d38d"
   atlas_memory = "eb18c75089ebcdefc16b91e04c765d93108c34a6a295297c2667c06964271637"
   url_rds = "https://app.datadoghq.com/graph/embed?token=9baf2f9afb8d9396b719688ca5013badcf69e15a23f1b51cb01942867998ddb8&height=#{widget_height}&width=#{widget_width}&legend=false"
 
